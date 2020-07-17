@@ -1,0 +1,23 @@
+{% IF promotion_campaign_empty %}
+  <div class="message attention">Акций в нашем магазине пока не проводилось</div>
+{% ELSE %}
+  <!-- Список акций -->
+  <div class="products__ajax">
+  <div class="promotion__campaign products__grid">
+    {% FOR promotion_campaign %}
+      <div class="promotion__item product__item {% IFNOT promotion_campaign.IS_WORK %}empty{% ENDIF %}">
+        <div class="product__form-{promotion_campaign.MIN_PRICE_NOW_ID}">
+          <div class="promotion__image">
+            <a href="{promotion_campaign.URL | url_amp}" title="{promotion_campaign.NAME}">
+              <img src="{ASSETS_IMAGES_PATH}promotion.png?design=drive" />
+            </a>
+          </div>
+          <div class="promotion__percentage">{promotion_campaign.PERCENTAGE} %</div>
+          <div class="promotion__date"><span>{promotion_campaign.BEGINNING_TIME | date("d.m.Y")}</span> <span class="separator">-</span> <span>{promotion_campaign.EXPIRED_TIME | date("d.m.Y")}</span></div>
+          <div class="promotion__name"><a href="{promotion_campaign.URL | url_amp}" title="{promotion_campaign.NAME}"><span>{promotion_campaign.NAME}</span><i class="material-icons">call_made</i></a></div>
+        </div>
+      </div>
+    {% ENDFOR promotion_campaign %}
+  </div>
+  </div>
+{% ENDIF %}
