@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?mf55l1');
-  src:  url('fonts/icomoon.eot?mf55l1#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?mf55l1') format('truetype'),
-    url('fonts/icomoon.woff?mf55l1') format('woff'),
-    url('fonts/icomoon.svg?mf55l1#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ogm6co');
+  src:  url('fonts/icomoon.eot?ogm6co#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?ogm6co') format('truetype'),
+  url('fonts/icomoon.woff?ogm6co') format('woff'),
+  url('fonts/icomoon.svg?ogm6co#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +13,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -25,6 +25,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mir:before {
+  content: "\e908";
+}
+.icon-sber:before {
+  content: "\e909";
+}
+.icon-walletone:before {
+  content: "\e90a";
+}
+.icon-yandexmoney:before {
+  content: "\e90b";
+}
+.icon-odnoklassniki:before {
+  content: "\e90c";
+}
+.icon-telegram:before {
+  content: "\e90d";
+}
+.icon-tiktok:before {
+  content: "\e90e";
+}
+.icon-viber:before {
+  content: "\e90f";
+}
+.icon-whatsapp:before {
+  content: "\e910";
+}
 .icon-user:before {
   content: "\e928";
 }
